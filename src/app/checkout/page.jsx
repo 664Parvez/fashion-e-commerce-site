@@ -52,6 +52,28 @@ const Checkout = () => {
                           <h2>Choose Payment Option: </h2>
                         </div>
 
+                        <div id={checkoutCss.payment_type_section}>
+                          <div className='d-flex justify-content-between align-items-center' id={checkoutCss.paymentType}>
+                            <div className="form-check">
+                              <input className="form-check-input" type="radio" name="cashOnDelivary" id="cashOnDelivary" defaultChecked></input>
+                              <label className="form-check-label" htmlFor="cashOnDelivary" id={checkoutCss.radioInputText}>Cash On Delivery</label>
+                            </div>
+                            <div>
+                              <h5 className='mb-0'>Cash On Delivery</h5>
+                            </div>
+                          </div>
+
+                          <div className='d-flex justify-content-between align-items-center' id={checkoutCss.paymentType}>
+                            <div className="form-check">
+                              <input className="form-check-input" type="radio" name="onlineDelivaryPay" id="onlineDelivaryPay"></input>
+                              <label className="form-check-label" htmlFor="onlineDelivaryPay" id={checkoutCss.radioInputText}>Online Payment</label>
+                            </div>
+                            <div>
+                              <h5 className='mb-0'>SSLCommerze</h5>
+                            </div>
+                          </div>
+                        </div>
+
                         <div className="col-lg-12 col-md-12 mt-5">
                           <div className="text-center">
                             <button className='btn btn-lg'>Payment</button>

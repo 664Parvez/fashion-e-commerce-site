@@ -18,7 +18,14 @@
     font-size: 40px;
     color: var(--first-color);
 }
-
+#radioInputText {
+    margin-left: 10px;
+}
+#paymentType {
+    padding: 20px 10px;
+    margin: 15px 0;
+    border: 1px dashed var(--first-color);
+}
 @media only screen and (min-width: 300px) and (max-width: 500px) {
     #rightContainer h2 {
         margin-top: 40px;
