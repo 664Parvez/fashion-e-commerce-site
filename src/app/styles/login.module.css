@@ -1,0 +1,14 @@
+#login_form_section {
+    background-color: var(--second-color);
+    padding: 50px 0;
+}
+#loginForm {
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: 10px;
+}
+#loginForm button {
+    background-color: var(--second-color);
+    width: 100%;
+    color: var(--white-color);
+}

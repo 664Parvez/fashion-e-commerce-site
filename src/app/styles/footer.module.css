@@ -1,0 +1,55 @@
+.footer .footer_top {
+    padding: 50px 0;
+}
+.footer_logo {
+    width: 250px !important;
+    margin-bottom: 20px;
+}
+.getDirection {
+    color: var(--first-color);
+    font-weight: 700;
+}
+.footer ul li {
+    margin: 8px 0;
+}
+.footer_social_media_icon ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+.footer_social_media_icon ul li a {
+    font-size: 18px;
+    color: var(--black-color);
+    transition: .3s ease-in-out;
+}
+.footer_social_media_icon ul li a:hover {
+    color: var(--first-color);
+    transition: .3s ease-in-out;
+}
+#footerInfo h4 {
+    margin-bottom: 25px;
+}
+#footerInfo ul li a {
+    color: var(--black-color);
+}
+#footerService ul li a {
+    color: var(--black-color);
+}
+#footerService h4 {
+    margin-bottom: 25px;
+}
+.payment_getway {
+    width: 350px !important;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .footer .footer_top {
+        padding: 20px 0;
+    }
+    .footer .footer_top h4 {
+        margin-top: 30px;
+    }
+    #getwayIcon {
+        text-align: center !important;
+        margin: 20px 0;
+    }
+}

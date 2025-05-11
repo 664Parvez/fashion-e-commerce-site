@@ -1,0 +1,30 @@
+.contactInfoSection {
+    padding: 60px 0;
+    background-color: var(--second-color);
+    color: var(--white-color);
+    border-radius: 10px;
+}
+.contactInfoIcon {
+    font-size: 55px;
+    margin-bottom: 30px;
+}
+.contactFormSection {
+    margin: 60px 0;
+    padding: 60px;
+    background-color: var(--offwhite-color);
+    border-radius: 10px;
+}
+.contactFormSection button {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+.contactFormSection button:hover {
+    background-color: var(--white-color);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .contactFormSection {
+        margin: 30px 0;
+        padding: 20px;
+    }
+}

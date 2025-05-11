@@ -1,0 +1,30 @@
+#leftContainer button {
+    background-color: var(--second-color) !important;
+    color: var(--white-color);
+    width: 100%;
+}
+.product_item #itemImg {
+    width: 100px !important;
+}
+.product_item h4 {
+    color: var(--first-color);
+}
+.bottom_section_box {
+    background-color: var(--offwhite-color);
+    padding: 30px;
+    border-radius: 5px;
+}
+.bottom_section_box_icon {
+    font-size: 40px;
+    color: var(--first-color);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    #rightContainer h2 {
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+    .product_item #itemImg {
+        width: 70px !important;
+    }
+}
