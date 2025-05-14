@@ -167,7 +167,7 @@ const Checkout = () => {
               </div>
             </div>
 
-            <div className="container-fluid my-5">
+            <div className="container-fluid my-lg-5">
               <div className="row">
                 <div className="col-lg-3 col-md-6 mt-3">
                   <div className={checkoutCss.bottom_section_box}>

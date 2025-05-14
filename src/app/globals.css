@@ -17,6 +17,7 @@ body {
 body {
   margin: auto !important;
   max-width: 2000px;
+  background-color: var(--offwhite-color);
 }
 
 * {
@@ -35,6 +36,9 @@ p, li, a, label, input, span, small {
 }
 button {
   font-family: "Kumbh Sans", sans-serif !important;
+}
+input::placeholder {
+  font-size: 16px;
 }
 .btn-bg-white {
   background-color: var(--second-color) !important;

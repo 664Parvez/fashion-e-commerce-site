@@ -18,6 +18,11 @@
     font-size: 40px;
     color: var(--first-color);
 }
+#rightContainer {
+    padding: 30px;
+    background-color: var(--offwhite-color);
+    border-radius: 10px;
+}
 #radioInputText {
     margin-left: 10px;
 }
@@ -27,8 +32,12 @@
     border: 1px dashed var(--first-color);
 }
 @media only screen and (min-width: 300px) and (max-width: 500px) {
+    #rightContainer {
+        margin-top: 30px;
+        padding: 10px 20px;
+    }
     #rightContainer h2 {
-        margin-top: 40px;
+        margin-top: 20px;
         margin-bottom: 0;
     }
     .product_item #itemImg {

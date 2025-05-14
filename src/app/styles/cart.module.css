@@ -1,0 +1,18 @@
+#checkoutPage {
+    margin-bottom: 50px;
+}
+#checkoutBtn {
+    width: 100%;
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+.cartShopLink {
+    color: var(--first-color);
+    font-weight: 700;
+}
+.checkoutRight {
+    border: 1px dashed var(--second-color);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--offwhite-color);
+}
