@@ -20,7 +20,8 @@ import NavbarLogo from "../../public/image/Navbar-Logo.png"
 const Navbar = () => {
 
   const [showNav, setShowNav] = useState(false)
-
+  const [mobileNavShow, setMobileNavShow] = useState(false)
+  const [mobileDropdownMenu, setMobileDropdownMenu] = useState(false)
 
   return (
     <>
@@ -37,7 +38,7 @@ const Navbar = () => {
                         <div>
                             <div className="d-flex justify-content-left align-items-center">
                                 <div className={NavbarCss.hamBarIcon}>
-                                    <FaBarsStaggered />
+                                    <FaBarsStaggered onClick={() => setMobileNavShow(true)} />
                                 </div>
                                 <div id={NavbarCss.navbar_logo}>
                                   <Link href="/">
@@ -55,10 +56,10 @@ const Navbar = () => {
                                         <div id={`${showNav ? NavbarCss.NavProductCategoryDisplay : NavbarCss.NavProductCategoryDisplayNone}`}>
                                             <div className={NavbarCss.NavProductCategory}>
                                                 <ul>
-                                                    <li><Link href="">Men's</Link></li>
-                                                    <li><Link href="">Women's</Link></li>
-                                                    <li><Link href="">Kid's</Link></li>
-                                                    <li><Link href="">Essential</Link></li>
+                                                    <li><Link href="/mens">Men's</Link></li>
+                                                    <li><Link href="/womens">Women's</Link></li>
+                                                    <li><Link href="/kids">Kid's</Link></li>
+                                                    <li><Link href="/essential">Essential</Link></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -72,8 +73,8 @@ const Navbar = () => {
                         <div>
                             <div className={NavbarCss.navbar_icon}>
                                 <ul>
-                                    <li><Link href=""><FaShoppingCart /><sup>0</sup></Link></li>
-                                    <li><Link href=""><FaHeart /><sup>0</sup></Link></li>
+                                    <li><Link href="/cart"><FaShoppingCart /><sup>0</sup></Link></li>
+                                    <li><Link href="/wishlist"><FaHeart /><sup>0</sup></Link></li>
                                     <li><Link href="/login"><FaUser /></Link></li>
                                 </ul>
                             </div>
@@ -82,44 +83,54 @@ const Navbar = () => {
                   </div>
           </nav>
 
-          <div id={NavbarCss.mobile_menu}>
+          <div id={NavbarCss.mobile_menu} className={mobileNavShow ? NavbarCss.mobile_menu_show : NavbarCss.mobile_menu_hide }>
             <div className="mb-4">
-              <IoClose id={NavbarCss.closeIcon} />
+              <IoClose id={NavbarCss.closeIcon} onClick={() => setMobileNavShow(false)} />
             </div>
             <input type="text" className='form-control form-control-lg' placeholder='What are looking for ?' />
 
             <div id={NavbarCss.mobile_menu_items}>
               <ul>
-                <li><Link href="">Home</Link></li>
-                <li><Link href="">
+                <li><Link href="/">Home</Link></li>
+                <li>
                   <div className="d-flex justify-content-between align-items-center">
-                    <span>
-                      Products
-                    </span>
-                    <span>
-                      <IoIosArrowDown />
-                    </span>
+                    <Link href="/products">
+                      <span>
+                        Products
+                      </span>
+                    </Link>
+                      <span onClick={() => setMobileDropdownMenu(!mobileDropdownMenu)}>
+                        <IoIosArrowDown />
+                      </span>
                   </div>
-                </Link></li>
-                <li><Link href="">About Us</Link></li>
-                <li><Link href="">Blog</Link></li>
-                <li><Link href="">Contact Us</Link></li>
+                  <div className={mobileDropdownMenu ? NavbarCss.mobileDropdownMenuShow : NavbarCss.mobileDropdownMenuHide}>
+                    <ul>
+                      <li><Link href="">Men's</Link></li>
+                      <li><Link href="">Women's</Link></li>
+                      <li><Link href="">Kid's</Link></li>
+                      <li><Link href="">Essential</Link></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><Link href="/about-us">About Us</Link></li>
+                <li><Link href="/blog">Blog</Link></li>
+                <li><Link href="/contact-us">Contact Us</Link></li>
               </ul>
             </div>
 
             <div className="d-flex justify-content-start align-items-center gap-4 mt-4">
               <div>
-                <Link href="" className='btn btn-dark'><FaHeart /> Wishlist</Link>
+                <Link href="/wishlist" className='btn btn-dark'><FaHeart /> Wishlist</Link>
               </div>
               <div>
-                <Link href="" className='btn btn-dark'><FaUser /> Login</Link>
+                <Link href="/login" className='btn btn-dark'><FaUser /> Login</Link>
               </div>
             </div>
 
             <div className='mt-5'>
               <h5>Need Help ?</h5>
               <p>549 Oak St.Crystal Lake, IL 60014</p>
-              <Link href="/contact-us">GET DIRECTION <FiArrowUpRight/></Link>
+              <Link className={NavbarCss.mobile_get_direction} href="/contact-us">GET DIRECTION <FiArrowUpRight/></Link>
 
               <div className="mt-3">
                 <p><FaPhoneAlt /> : info@amamfashion.com</p>

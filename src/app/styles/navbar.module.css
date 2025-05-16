@@ -67,6 +67,7 @@
 .navbar_icon ul li a {
     text-decoration: none;
     color: var(--white-color);
+    font-size: 18px;
 }
 .hamBarIcon {
     margin-right: 20px;
@@ -83,6 +84,28 @@
     padding: 20px;
     overflow-y: scroll;
 }
+.mobile_menu_hide {
+    left: -350px;
+    transition: .5s ease-in-out;
+}
+.mobile_menu_show {
+    left: 0;
+    transition: .5s ease-in-out;
+}
+.mobileDropdownMenuShow {
+    display: block;
+}
+.mobileDropdownMenuHide {
+    display: none;
+}
+.mobileDropdownMenuShow ul {
+    margin-left: 20px !important;
+    margin-top: 25px ;
+}
+.mobileDropdownMenuShow ul li {
+    border-bottom: none !important;
+    border-top: 1px solid var(--offwhite-color);
+}
 #closeIcon {
     font-size: 30px;
     cursor: pointer;
@@ -93,6 +116,13 @@
 #mobile_menu_items ul li {
     padding: 15px 0;
     border-bottom: 1px solid var(--offwhite-color);
+}
+#mobile_menu_items ul li a {
+    color: var(--first-color);
+}
+.mobile_get_direction {
+    color: var(--first-color);
+    font-weight: 700;
 }
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
