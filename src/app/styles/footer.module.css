@@ -37,6 +37,9 @@
 #footerService h4 {
     margin-bottom: 25px;
 }
+#copyright p a {
+    color: var(--first-color);
+}
 .payment_getway {
     width: 350px !important;
 }
@@ -51,5 +54,20 @@
     #getwayIcon {
         text-align: center !important;
         margin: 20px 0;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    .footer .footer_top {
+        padding: 20px 0;
+    }
+    .footer_logo {
+        width: 200px !important;
+    }
+    .footer .footer_top h4 {
+        margin-top: 30px;
+    }
+    .payment_getway {
+        width: 100% !important;
     }
 }

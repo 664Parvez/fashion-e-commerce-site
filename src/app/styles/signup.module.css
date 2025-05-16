@@ -12,3 +12,9 @@
     width: 100%;
     color: var(--white-color);
 }
+
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    #signup_form_section {
+        padding: 20px 0;
+    }
+}

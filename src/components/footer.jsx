@@ -89,9 +89,9 @@ const Footer = () => {
                 <div className="container-fluid">
                     <hr />
 
-                    <div className="row align-items-center mb-4">
+                    <div className="row align-items-center mb-4" id={footerCss.copyright}>
                         <div className="col-lg-6 col-md-6">
-                            <p>&copy; {date} AMAM Fashion. | All Right Reserved | Design & Development by: <a href='https://parvez-rabbi.vercel.app/'>Parvez Rabbi</a></p>
+                            <p>&copy; {date} AMAM Fashion. | All Right Reserved | Design & Development by: <Link href='https://parvez-rabbi.vercel.app/'>Parvez Rabbi</Link></p>
                         </div>
                         <div className="col-lg-6 col-md-6">
                             <div className="text-end" id={footerCss.getwayIcon}>

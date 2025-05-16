@@ -140,3 +140,14 @@
         display: none;
     }
 }
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    .main_menu {
+        display: none;
+    }
+    .hamBarIcon {
+        display: block;
+    }
+    .hamBarIcon {
+        font-size: 30px;
+    }
+}
