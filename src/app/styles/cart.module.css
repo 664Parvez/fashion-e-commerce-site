@@ -16,3 +16,18 @@
     padding: 20px;
     background-color: var(--offwhite-color);
 }
+
+.checkoutLeft img {
+    width: 100px !important;
+}
+.checkoutLeft input {
+    width: 80px;
+}
+.incDecBtn {
+    background-color: var(--first-color);
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-size: 25px;
+    color: var(--white-color);
+    cursor: pointer;
+}
