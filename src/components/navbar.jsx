@@ -7,7 +7,7 @@ import NavbarCss from "../app/styles/navbar.module.css"
 
 
 // Icons
-import { FaShoppingCart, FaHeart, FaUser, FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
+import { FaShoppingCart, FaTimes, FaHeart, FaUser, FaPhoneAlt, FaRegEnvelope, FaSearch } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
@@ -15,6 +15,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 // Image
 import NavbarLogo from "../../public/image/Navbar-Logo.png"
+import Image1 from "../../public/image/product1.jpg"
 
 
 const Navbar = () => {
@@ -22,6 +23,7 @@ const Navbar = () => {
   const [showNav, setShowNav] = useState(false)
   const [mobileNavShow, setMobileNavShow] = useState(false)
   const [mobileDropdownMenu, setMobileDropdownMenu] = useState(false)
+  const [searchRightBar, setSearchRightBar] = useState(false)
 
   return (
     <>
@@ -73,6 +75,7 @@ const Navbar = () => {
                         <div>
                             <div className={NavbarCss.navbar_icon}>
                                 <ul>
+                                    <li className={NavbarCss.search_icon} onClick={() => setSearchRightBar(!searchRightBar)}><FaSearch /></li>
                                     <li><Link href="/cart"><FaShoppingCart /><sup>0</sup></Link></li>
                                     <li><Link href="/wishlist"><FaHeart /><sup>0</sup></Link></li>
                                     <li><Link href="/login"><FaUser /></Link></li>
@@ -135,6 +138,28 @@ const Navbar = () => {
               <div className="mt-3">
                 <p><FaPhoneAlt /> : info@amamfashion.com</p>
                 <p><FaRegEnvelope /> : 315-666-6688</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={searchRightBar ? NavbarCss.search_right_side : NavbarCss.search_right_side_hide }>
+            <div className="text-end">
+              <FaTimes className={NavbarCss.search_right_bar_close} onClick={() => setSearchRightBar(false)} />
+            </div>
+            <h4>Search product here</h4>
+            <input type="text" className='form-control form-control-lg' placeholder='Search . . .' />
+
+            <hr />
+
+            <div className={NavbarCss.search_product_show}>
+              <div className="d-flex justify-content-start align-items-center gap-3">
+                <div>
+                  <Image src={Image1} layout='responsive' width={0} height={0} alt=''></Image>
+                </div>
+                <div>
+                  <h4>Product Name Here</h4>
+                  <p>Price: $45.25</p>
+                </div>
               </div>
             </div>
           </div>

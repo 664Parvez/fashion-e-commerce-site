@@ -1,0 +1,13 @@
+#categoriesImage {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#categoryName {
+    background: var(--first-color);
+    padding: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#categoryName {
+    color: var(--white-color);
+}
