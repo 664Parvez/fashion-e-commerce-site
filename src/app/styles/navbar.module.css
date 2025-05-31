@@ -130,7 +130,7 @@
     cursor: pointer;
 }
 .search_right_side {
-    width: 400px;
+    width: 360px;
     background-color: var(--offwhite-color);
     position: absolute;
     right: 0;
