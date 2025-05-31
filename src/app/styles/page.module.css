@@ -1,3 +1,39 @@
+#product_section_one {
+  padding: 50px 0;
+}
+#product_section_one h3 {
+  font-size: 35px;
+}
+#product_details {
+  margin-top: 20px;
+}
+#product_details h5 {
+  color: var(--black-color);
+}
+#imageWrap {
+  height: 360px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: var(--ash-color);
+}
+#imageWrap img {
+  height: 100%;
+}
+#product_details #cart_btn {
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+.productWishlistBtn {
+  font-size: 25px;
+  color: var(--first-color);
+}
+.cross_taka {
+  font-size: 20px;
+  color: var(--ash-color);
+  text-decoration: line-through;
+}
+
 #twoImageSection {
   padding: 50px 0;
 }

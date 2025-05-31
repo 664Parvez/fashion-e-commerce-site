@@ -1,11 +1,24 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import homeCss from "./styles/page.module.css";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Autoplay, Navigation } from 'swiper/modules';
 
 // Icon
 import { TbArrowBackUp, TbRosetteDiscountCheck } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
 import { MdOutlineLocalShipping } from "react-icons/md";
+import { FaShieldHeart } from "react-icons/fa6";
 
 // Image
 import Demo from "../../public/image/demo.png"
@@ -17,6 +30,254 @@ export default function Home() {
   return (
     <>
       <Sidegap>
+
+        <div id={homeCss.product_section_one}>
+          <div className="mb-4">
+            <h3 className="mb-0">Women's Clothing</h3>
+            <p>We have your occasion covered</p>
+          </div>
+
+          <Swiper
+            slidesPerView={5.2}
+            spaceBetween={25}
+            centeredSlides={true}
+            grabCursor={true}
+            loop={true}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // }}
+            navigation={true}
+            modules={[Autoplay, Navigation]}
+            className="productOneSwiper"
+          >
+            <SwiperSlide>
+              <Link href="">
+                <div id={homeCss.imageWrap}>
+                  <Image src={Demo} className="rounded-3" layout="responsive" width={0} height={0} alt=""></Image>
+                </div>
+              </Link>
+              <div id={homeCss.product_details}>
+                <Link href="">
+                  <h5>Sequin Prom Dreses Long Mermaid One Shoulder Formal Gowns Backless Evening Party Gowns with Slit</h5>
+                </Link>
+                <div className="my-4">
+                  <h4><span className={homeCss.cross_taka}>৳400/-</span> <b>৳200/-</b></h4>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Link className="btn" id={homeCss.cart_btn} href="">Add To Cart</Link>
+                  </div>
+                  <div>
+                    <Link href="">
+                      <FaShieldHeart className={homeCss.productWishlistBtn} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link href="">
+                <div id={homeCss.imageWrap}>
+                  <Image src={Demo} className="rounded-3" layout="responsive" width={0} height={0} alt=""></Image>
+                </div>
+              </Link>
+              <div id={homeCss.product_details}>
+                <Link href="">
+                  <h5>Sequin Prom Dreses Long Mermaid One Shoulder Formal Gowns Backless Evening Party Gowns with Slit</h5>
+                </Link>
+                <div className="my-4">
+                  <h4><span className={homeCss.cross_taka}>৳400/-</span> <b>৳200/-</b></h4>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Link className="btn" id={homeCss.cart_btn} href="">Add To Cart</Link>
+                  </div>
+                  <div>
+                    <Link href="">
+                      <FaShieldHeart className={homeCss.productWishlistBtn} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link href="">
+                <div id={homeCss.imageWrap}>
+                  <Image src={Demo} className="rounded-3" layout="responsive" width={0} height={0} alt=""></Image>
+                </div>
+              </Link>
+              <div id={homeCss.product_details}>
+                <Link href="">
+                  <h5>Sequin Prom Dreses Long Mermaid One Shoulder Formal Gowns Backless Evening Party Gowns with Slit</h5>
+                </Link>
+                <div className="my-4">
+                  <h4><span className={homeCss.cross_taka}>৳400/-</span> <b>৳200/-</b></h4>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Link className="btn" id={homeCss.cart_btn} href="">Add To Cart</Link>
+                  </div>
+                  <div>
+                    <Link href="">
+                      <FaShieldHeart className={homeCss.productWishlistBtn} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link href="">
+                <div id={homeCss.imageWrap}>
+                  <Image src={Demo} className="rounded-3" layout="responsive" width={0} height={0} alt=""></Image>
+                </div>
+              </Link>
+              <div id={homeCss.product_details}>
+                <Link href="">
+                  <h5>Sequin Prom Dreses Long Mermaid One Shoulder Formal Gowns Backless Evening Party Gowns with Slit</h5>
+                </Link>
+                <div className="my-4">
+                  <h4><span className={homeCss.cross_taka}>৳400/-</span> <b>৳200/-</b></h4>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Link className="btn" id={homeCss.cart_btn} href="">Add To Cart</Link>
+                  </div>
+                  <div>
+                    <Link href="">
+                      <FaShieldHeart className={homeCss.productWishlistBtn} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link href="">
+                <div id={homeCss.imageWrap}>
+                  <Image src={Demo} className="rounded-3" layout="responsive" width={0} height={0} alt=""></Image>
+                </div>
+              </Link>
+              <div id={homeCss.product_details}>
+                <Link href="">
+                  <h5>Sequin Prom Dreses Long Mermaid One Shoulder Formal Gowns Backless Evening Party Gowns with Slit</h5>
+                </Link>
+                <div className="my-4">
+                  <h4><span className={homeCss.cross_taka}>৳400/-</span> <b>৳200/-</b></h4>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Link className="btn" id={homeCss.cart_btn} href="">Add To Cart</Link>
+                  </div>
+                  <div>
+                    <Link href="">
+                      <FaShieldHeart className={homeCss.productWishlistBtn} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link href="">
+                <div id={homeCss.imageWrap}>
+                  <Image src={Demo} className="rounded-3" layout="responsive" width={0} height={0} alt=""></Image>
+                </div>
+              </Link>
+              <div id={homeCss.product_details}>
+                <Link href="">
+                  <h5>Sequin Prom Dreses Long Mermaid One Shoulder Formal Gowns Backless Evening Party Gowns with Slit</h5>
+                </Link>
+                <div className="my-4">
+                  <h4><span className={homeCss.cross_taka}>৳400/-</span> <b>৳200/-</b></h4>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Link className="btn" id={homeCss.cart_btn} href="">Add To Cart</Link>
+                  </div>
+                  <div>
+                    <Link href="">
+                      <FaShieldHeart className={homeCss.productWishlistBtn} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link href="">
+                <div id={homeCss.imageWrap}>
+                  <Image src={Demo} className="rounded-3" layout="responsive" width={0} height={0} alt=""></Image>
+                </div>
+              </Link>
+              <div id={homeCss.product_details}>
+                <Link href="">
+                  <h5>Sequin Prom Dreses Long Mermaid One Shoulder Formal Gowns Backless Evening Party Gowns with Slit</h5>
+                </Link>
+                <div className="my-4">
+                  <h4><span className={homeCss.cross_taka}>৳400/-</span> <b>৳200/-</b></h4>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Link className="btn" id={homeCss.cart_btn} href="">Add To Cart</Link>
+                  </div>
+                  <div>
+                    <Link href="">
+                      <FaShieldHeart className={homeCss.productWishlistBtn} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link href="">
+                <div id={homeCss.imageWrap}>
+                  <Image src={Demo} className="rounded-3" layout="responsive" width={0} height={0} alt=""></Image>
+                </div>
+              </Link>
+              <div id={homeCss.product_details}>
+                <Link href="">
+                  <h5>Sequin Prom Dreses Long Mermaid One Shoulder Formal Gowns Backless Evening Party Gowns with Slit</h5>
+                </Link>
+                <div className="my-4">
+                  <h4><span className={homeCss.cross_taka}>৳400/-</span> <b>৳200/-</b></h4>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Link className="btn" id={homeCss.cart_btn} href="">Add To Cart</Link>
+                  </div>
+                  <div>
+                    <Link href="">
+                      <FaShieldHeart className={homeCss.productWishlistBtn} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link href="">
+                <div id={homeCss.imageWrap}>
+                  <Image src={Demo} className="rounded-3" layout="responsive" width={0} height={0} alt=""></Image>
+                </div>
+              </Link>
+              <div id={homeCss.product_details}>
+                <Link href="">
+                  <h5>Sequin Prom Dreses Long Mermaid One Shoulder Formal Gowns Backless Evening Party Gowns with Slit</h5>
+                </Link>
+                <div className="my-4">
+                  <h4><span className={homeCss.cross_taka}>৳400/-</span> <b>৳200/-</b></h4>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <Link className="btn" id={homeCss.cart_btn} href="">Add To Cart</Link>
+                  </div>
+                  <div>
+                    <Link href="">
+                      <FaShieldHeart className={homeCss.productWishlistBtn} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
 
         <div id={homeCss.twoImageSection}>
           <div className="container-lg">
