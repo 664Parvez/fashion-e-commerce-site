@@ -38,7 +38,7 @@ export default function Home() {
           </div>
 
           <Swiper
-            slidesPerView={5.2}
+            slidesPerView="auto"
             spaceBetween={25}
             centeredSlides={true}
             grabCursor={true}
@@ -47,6 +47,28 @@ export default function Home() {
             //   delay: 2500,
             //   disableOnInteraction: false,
             // }}
+            breakpoints={{
+              300: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+              },
+              1100: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+              }
+            }}
             navigation={true}
             modules={[Autoplay, Navigation]}
             className="productOneSwiper"
