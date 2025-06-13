@@ -60,3 +60,11 @@ ul {
   list-style: none;
   padding-left: 0 !important;
 }
+.accordion-button:focus {
+  border-color: none !important;
+  box-shadow: none !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: var(--offwhite-color) !important;
+  color: var(--first-color) !important;
+}

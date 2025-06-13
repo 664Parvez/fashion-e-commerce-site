@@ -141,8 +141,8 @@
     transition: .5s ease-in-out;
 }
 .search_right_side_hide {
-    right: -400px;
-    width: 400px;
+    right: -320px;
+    width: 320px;
     background-color: var(--offwhite-color);
     position: absolute;
     top: 0;
