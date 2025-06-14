@@ -37,7 +37,7 @@ const Navbar = () => {
                 </div>
                 <div id={NavbarCss.navbar}>
                     <div className="d-flex justify-content-between align-items-center">
-                        <div>
+                        <div style={{flexGrow: 1}}>
                             <div className="d-flex justify-content-left align-items-center">
                                 <div className={NavbarCss.hamBarIcon}>
                                     <FaBarsStaggered onClick={() => setMobileNavShow(true)} />
@@ -49,30 +49,12 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div className={NavbarCss.main_menu}>
-                                <ul>
-                                    <li><Link href="/">Home</Link></li>
-                                    <li id={NavbarCss.productsMenuItem} onMouseOver={() => setShowNav(true)} onMouseLeave={() => setShowNav(false)}>
-                                        <Link href="/products">Products <IoIosArrowDown /></Link>
-                                        <div id={`${showNav ? NavbarCss.NavProductCategoryDisplay : NavbarCss.NavProductCategoryDisplayNone}`}>
-                                            <div className={NavbarCss.NavProductCategory}>
-                                                <ul>
-                                                    <li><Link href="/mens">Men's</Link></li>
-                                                    <li><Link href="/womens">Women's</Link></li>
-                                                    <li><Link href="/kids">Kid's</Link></li>
-                                                    <li><Link href="/essential">Essential</Link></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li><Link href="/about-us">About Us</Link></li>
-                                    <li><Link href="/blog">Blog</Link></li>
-                                    <li><Link href="/contact-us">Contact Us</Link></li>
-                                </ul>
+                        <div style={{flexGrow: 5}}>
+                            <div className={NavbarCss.NavSearchBar}>
+                                <input type="text" className='form-control form-control-lg' placeholder='Search your product here . . .' />
                             </div>
                         </div>
-                        <div>
+                        <div style={{flexGrow: 1}}>
                             <div className={NavbarCss.navbar_icon}>
                                 <ul>
                                     <li className={NavbarCss.search_icon} onClick={() => setSearchRightBar(!searchRightBar)}><FaSearch /></li>
@@ -82,6 +64,18 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                  </div>
+
+                  <div className={NavbarCss.navMenuItems}>
+                    <div className={NavbarCss.main_menu}>
+                        <ul>
+                            <li className={NavbarCss.pcMenuHome}><Link href="/">Home</Link></li>
+                            <li><Link href="/mens">Men's</Link></li>
+                            <li><Link href="/womens">Women's</Link></li>
+                            <li><Link href="/kids">Kid's</Link></li>
+                            <li><Link href="/essential">Essential</Link></li>
+                        </ul>
                     </div>
                   </div>
           </nav>

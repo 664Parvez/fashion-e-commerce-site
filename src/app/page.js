@@ -12,13 +12,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 // import required modules
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Scrollbar } from 'swiper/modules';
 
 // Icon
 import { TbArrowBackUp, TbRosetteDiscountCheck } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
 import { MdOutlineLocalShipping } from "react-icons/md";
-import { FaShieldHeart, FaStar } from "react-icons/fa6";
+import { FaShieldHeart, FaStar, FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 // Image
 import Demo from "../../public/image/demo.png"
@@ -30,6 +30,32 @@ import Sidegap from "@/components/sidegap";
 export default function Home() {
   return (
     <>
+
+      <div id={homeCss.hero_section}>
+          <Swiper
+            centeredSlides={true}
+            grabCursor={true}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            scrollbar={{hide: true}}
+            modules={[Autoplay, Scrollbar]}
+            className="heroSwiper"
+          >
+            <SwiperSlide>
+              <Image src={Blog} layout="responsive" width={0} height={0} alt=""></Image>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={Blog} layout="responsive" width={0} height={0} alt=""></Image>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={Blog} layout="responsive" width={0} height={0} alt=""></Image>
+            </SwiperSlide>
+          </Swiper>
+      </div>
+
       <Sidegap>
 
         <div id={homeCss.product_section_one}>
@@ -39,6 +65,14 @@ export default function Home() {
               <p>We have your occasion covered</p>
             </div>
             <div>
+              <ul className={homeCss.swiper_navigation}>
+                <li>
+                  <div className="women-product-button-prev"><FaArrowLeftLong /></div>
+                </li>
+                <li>
+                  <div className="women-product-button-next"><FaArrowRightLong /></div>
+                </li>
+              </ul>
               <Link href="" className={homeCss.product_seemore}>See More</Link>
             </div>
           </div>
@@ -75,7 +109,10 @@ export default function Home() {
                 spaceBetween: 20,
               }
             }}
-            navigation={true}
+            navigation={{
+              nextEl: ".women-product-button-next",
+              prevEl: ".women-product-button-prev"
+            }}
             modules={[Autoplay, Navigation]}
             className="womenProductSwiper"
           >
@@ -345,6 +382,14 @@ export default function Home() {
               <p>We have your occasion covered</p>
             </div>
             <div>
+              <ul className={homeCss.swiper_navigation}>
+                <li>
+                  <div className="men-product-button-prev"><FaArrowLeftLong /></div>
+                </li>
+                <li>
+                  <div className="men-product-button-next"><FaArrowRightLong /></div>
+                </li>
+              </ul>
               <Link href="" className={homeCss.product_seemore}>See More</Link>
             </div>
           </div>
@@ -381,7 +426,10 @@ export default function Home() {
                 spaceBetween: 20,
               }
             }}
-            navigation={true}
+            navigation={{
+              nextEl: ".men-product-button-next",
+              prevEl: ".men-product-button-prev"
+            }}
             modules={[Autoplay, Navigation]}
             className="menProductSwiper"
           >
@@ -676,7 +724,10 @@ export default function Home() {
                     spaceBetween: 20,
                   }
                 }}
-                navigation={true}
+                navigation={{
+                  nextEl: ".review-button-next",
+                  prevEl: ".review-button-prev"
+                }}
                 modules={[Autoplay, Navigation]}
                 className="reviewSwiper"
               >
@@ -802,6 +853,17 @@ export default function Home() {
               </Swiper>
             </div>
           </div>
+            
+            <div className="text-end mt-4">
+              <ul className={homeCss.swiper_navigation}>
+                <li>
+                  <div className="review-button-prev"><FaArrowLeftLong /></div>
+                </li>
+                <li>
+                  <div className="review-button-next"><FaArrowRightLong /></div>
+                </li>
+              </ul>
+            </div>
         </div>
 
         <div id={homeCss.homeBlogSection}>

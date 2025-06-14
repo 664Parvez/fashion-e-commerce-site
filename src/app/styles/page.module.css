@@ -125,6 +125,15 @@
   color: var(--first-color);
 }
 
+.swiper_navigation {
+  margin-bottom: 0;
+}
+.swiper_navigation li {
+  display: inline-block;
+  padding-right: 15px;
+  font-size: 25px;
+  color: var(--second-color);
+}
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
   #product_section_one {
