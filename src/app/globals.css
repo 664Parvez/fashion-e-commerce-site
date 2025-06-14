@@ -10,9 +10,11 @@
   --offwhite-color: #eeeeee;
 }
 
-html,
-body {
-  overflow-x: hidden;
+html {
+    scroll-behavior: smooth;
+}
+html, body{
+    overflow-x: hidden;
 }
 
 body {
