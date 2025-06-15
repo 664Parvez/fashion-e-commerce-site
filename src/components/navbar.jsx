@@ -49,7 +49,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-                        <div style={{flexGrow: 5}}>
+                        <div style={{flexGrow: 4}}>
                             <div className={NavbarCss.NavSearchBar}>
                                 <input type="text" className='form-control form-control-lg' placeholder='Search your product here . . .' />
                             </div>
@@ -71,10 +71,11 @@ const Navbar = () => {
                     <div className={NavbarCss.main_menu}>
                         <ul>
                             <li className={NavbarCss.pcMenuHome}><Link href="/">Home</Link></li>
+                            <li><Link href="/new-in">New In</Link></li>
                             <li><Link href="/mens">Men's</Link></li>
                             <li><Link href="/womens">Women's</Link></li>
                             <li><Link href="/kids">Kid's</Link></li>
-                            <li><Link href="/essential">Essential</Link></li>
+                            <li><Link href="/essential">Accessories</Link></li>
                         </ul>
                     </div>
                   </div>

@@ -58,6 +58,128 @@ export default function Home() {
 
       <Sidegap>
 
+        <div id={homeCss.productsCategories}>
+          <div className="mb-4 text-center">
+            <h3 className="mb-0">Top Categories</h3>
+            <p>We have your occasion covered</p>
+          </div>
+
+          <div className="row">
+            <div className="col-lg-3 col-md-6 mt-3">
+              <div className={homeCss.categoryType}>
+                <Link href="">
+                  <div className="card">
+                    <Image src={Demo} className="card-img" layout="responsive" width={0} height={0} alt=""></Image>
+                    <div className="card-body">
+                      <div className="text-center">
+                        <h4 className="mb-0">T-Shirt</h4>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mt-3">
+              <div className={homeCss.categoryType}>
+                <Link href="">
+                  <div className="card">
+                    <Image src={Demo} className="card-img" layout="responsive" width={0} height={0} alt=""></Image>
+                    <div className="card-body">
+                      <div className="text-center">
+                        <h4 className="mb-0">Polo Shirt</h4>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mt-3">
+              <div className={homeCss.categoryType}>
+                <Link href="">
+                  <div className="card">
+                    <Image src={Demo} className="card-img" layout="responsive" width={0} height={0} alt=""></Image>
+                    <div className="card-body">
+                      <div className="text-center">
+                        <h4 className="mb-0">Kurti</h4>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mt-3">
+              <div className={homeCss.categoryType}>
+                <Link href="">
+                  <div className="card">
+                    <Image src={Demo} className="card-img" layout="responsive" width={0} height={0} alt=""></Image>
+                    <div className="card-body">
+                      <div className="text-center">
+                        <h4 className="mb-0">Three Piece</h4>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mt-3">
+              <div className={homeCss.categoryType}>
+                <Link href="">
+                  <div className="card">
+                    <Image src={Demo} className="card-img" layout="responsive" width={0} height={0} alt=""></Image>
+                    <div className="card-body">
+                      <div className="text-center">
+                        <h4 className="mb-0">Shirt</h4>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mt-3">
+              <div className={homeCss.categoryType}>
+                <Link href="">
+                  <div className="card">
+                    <Image src={Demo} className="card-img" layout="responsive" width={0} height={0} alt=""></Image>
+                    <div className="card-body">
+                      <div className="text-center">
+                        <h4 className="mb-0">Pants</h4>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mt-3">
+              <div className={homeCss.categoryType}>
+                <Link href="">
+                  <div className="card">
+                    <Image src={Demo} className="card-img" layout="responsive" width={0} height={0} alt=""></Image>
+                    <div className="card-body">
+                      <div className="text-center">
+                        <h4 className="mb-0">Hoodie</h4>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mt-3">
+              <div className={homeCss.categoryType}>
+                <Link href="">
+                  <div className="card">
+                    <Image src={Demo} className="card-img" layout="responsive" width={0} height={0} alt=""></Image>
+                    <div className="card-body">
+                      <div className="text-center">
+                        <h4 className="mb-0">Shorts</h4>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div id={homeCss.product_section_one}>
           <div className="d-flex justify-content-between align-items-center">
             <div className="mb-4">
@@ -683,7 +805,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id={homeCss.reviewSection}>
+        {/* <div id={homeCss.reviewSection}>
           <div className="text-center">
             <h3 className="mb-0">Client Reviews</h3>
             <p>All Client Reviews Here</p>
@@ -864,7 +986,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-        </div>
+        </div> */}
 
         <div id={homeCss.homeBlogSection}>
           <div className="text-center">
@@ -934,7 +1056,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id={homeCss.faqSection}>
+        {/* <div id={homeCss.faqSection}>
           <div className="text-center">
             <h3 className="mb-0">Frequently Asked Question</h3>
           </div>
@@ -981,11 +1103,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div id={homeCss.ourclientsLogo}>
-
-        </div>
       </Sidegap>
        
        <hr />

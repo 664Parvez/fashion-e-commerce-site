@@ -1,3 +1,13 @@
+#productsCategories {
+  padding: 50px 0;
+}
+#productsCategories h3 {
+  font-size: 35px;
+}
+.categoryType h4 {
+  color: var(--first-color);
+}
+
 #product_section_one {
   padding: 50px 0;
 }
