@@ -91,11 +91,12 @@ const Navbar = () => {
             <div id={NavbarCss.mobile_menu_items}>
               <ul>
                 <li><Link href="/">Home</Link></li>
+                <li><Link href="/new-arrivals">New Arrivals <sup>New</sup></Link></li>
                 <li>
                   <div className="d-flex justify-content-between align-items-center">
-                    <Link href="/products">
+                    <Link href="/all-products">
                       <span>
-                        Products
+                        All Products
                       </span>
                     </Link>
                       <span onClick={() => setMobileDropdownMenu(!mobileDropdownMenu)}>
@@ -107,7 +108,7 @@ const Navbar = () => {
                       <li><Link href="">Men's</Link></li>
                       <li><Link href="">Women's</Link></li>
                       <li><Link href="">Kid's</Link></li>
-                      <li><Link href="">Essential</Link></li>
+                      <li><Link href="">Accessories</Link></li>
                     </ul>
                   </div>
                 </li>

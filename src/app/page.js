@@ -65,7 +65,7 @@ export default function Home() {
           </div>
 
           <div className="row">
-            <div className="col-lg-3 col-md-6 mt-3">
+            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -79,7 +79,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 mt-3">
+            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -93,7 +93,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 mt-3">
+            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -107,7 +107,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 mt-3">
+            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -121,7 +121,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 mt-3">
+            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -135,7 +135,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 mt-3">
+            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -149,7 +149,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 mt-3">
+            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -163,7 +163,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 mt-3">
+            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">

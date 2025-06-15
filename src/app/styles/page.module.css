@@ -7,6 +7,9 @@
 .categoryType h4 {
   color: var(--first-color);
 }
+#categoryBox {
+  width: 50%;
+}
 
 #product_section_one {
   padding: 50px 0;
