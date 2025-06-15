@@ -71,7 +71,8 @@ const Navbar = () => {
                     <div className={NavbarCss.main_menu}>
                         <ul>
                             <li className={NavbarCss.pcMenuHome}><Link href="/">Home</Link></li>
-                            <li><Link href="/new-arrivals">New Arrivals</Link></li>
+                            <li><Link href="/all-products">All Products</Link></li>
+                            <li><Link href="/new-arrivals">New Arrivals <sup>New</sup></Link></li>
                             <li><Link href="/mens">Men's</Link></li>
                             <li><Link href="/womens">Women's</Link></li>
                             <li><Link href="/kids">Kid's</Link></li>
