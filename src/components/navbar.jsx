@@ -71,11 +71,11 @@ const Navbar = () => {
                     <div className={NavbarCss.main_menu}>
                         <ul>
                             <li className={NavbarCss.pcMenuHome}><Link href="/">Home</Link></li>
-                            <li><Link href="/new-in">New In</Link></li>
+                            <li><Link href="/new-arrivals">New Arrivals</Link></li>
                             <li><Link href="/mens">Men's</Link></li>
                             <li><Link href="/womens">Women's</Link></li>
                             <li><Link href="/kids">Kid's</Link></li>
-                            <li><Link href="/essential">Accessories</Link></li>
+                            <li><Link href="/accessories">Accessories</Link></li>
                         </ul>
                     </div>
                   </div>
