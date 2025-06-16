@@ -64,8 +64,47 @@ export default function Home() {
             <p>We have your occasion covered</p>
           </div>
 
-          <div className="row">
-            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
+          <Swiper
+            slidesPerView="auto"
+            spaceBetween={25}
+            centeredSlides={true}
+            grabCursor={true}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              300: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+              },
+              1100: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+              }
+            }}
+            navigation={{
+              nextEl: ".women-product-button-next",
+              prevEl: ".women-product-button-prev"
+            }}
+            modules={[Autoplay, Navigation]}
+            className="womenProductSwiper"
+          >
+
+            <SwiperSlide>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -78,8 +117,8 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
+            </SwiperSlide> 
+            <SwiperSlide>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -92,8 +131,8 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
+            </SwiperSlide> 
+            <SwiperSlide>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -106,8 +145,8 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
+            </SwiperSlide> 
+            <SwiperSlide>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -120,8 +159,8 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
+            </SwiperSlide> 
+            <SwiperSlide>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -134,8 +173,8 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
+            </SwiperSlide> 
+            <SwiperSlide>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -148,8 +187,8 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
+            </SwiperSlide> 
+            <SwiperSlide>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -162,8 +201,8 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-6 mt-3" id={homeCss.categoryBox}>
+            </SwiperSlide> 
+            <SwiperSlide>
               <div className={homeCss.categoryType}>
                 <Link href="">
                   <div className="card">
@@ -176,8 +215,8 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-            </div>
-          </div>
+            </SwiperSlide> 
+          </Swiper>
         </div>
 
         <div id={homeCss.product_section_one}>
