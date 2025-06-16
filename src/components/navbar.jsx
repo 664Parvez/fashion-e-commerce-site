@@ -72,11 +72,11 @@ const Navbar = () => {
                         <ul>
                             <li className={NavbarCss.pcMenuHome}><Link href="/">Home</Link></li>
                             <li><Link href="/all-products">All Products</Link></li>
-                            <li><Link href="/new-arrivals">New Arrivals <sup>New</sup></Link></li>
-                            <li><Link href="/mens">Men's</Link></li>
-                            <li><Link href="/womens">Women's</Link></li>
-                            <li><Link href="/kids">Kid's</Link></li>
-                            <li><Link href="/accessories">Accessories</Link></li>
+                            <li><Link href="/all-products/new-arrivals">New Arrivals <sup>New</sup></Link></li>
+                            <li><Link href="/all-products/mens">Men's</Link></li>
+                            <li><Link href="/all-products/womens">Women's</Link></li>
+                            <li><Link href="/all-products/kids">Kid's</Link></li>
+                            <li><Link href="/all-products/accessories">Accessories</Link></li>
                         </ul>
                     </div>
                   </div>
@@ -91,7 +91,7 @@ const Navbar = () => {
             <div id={NavbarCss.mobile_menu_items}>
               <ul>
                 <li><Link href="/">Home</Link></li>
-                <li><Link href="/new-arrivals">New Arrivals <sup>New</sup></Link></li>
+                <li><Link href="/all-products/new-arrivals">New Arrivals <sup>New</sup></Link></li>
                 <li>
                   <div className="d-flex justify-content-between align-items-center">
                     <Link href="/all-products">
@@ -105,10 +105,10 @@ const Navbar = () => {
                   </div>
                   <div className={mobileDropdownMenu ? NavbarCss.mobileDropdownMenuShow : NavbarCss.mobileDropdownMenuHide}>
                     <ul>
-                      <li><Link href="">Men's</Link></li>
-                      <li><Link href="">Women's</Link></li>
-                      <li><Link href="">Kid's</Link></li>
-                      <li><Link href="">Accessories</Link></li>
+                      <li><Link href="/all-products/mens">Men's</Link></li>
+                      <li><Link href="/all-products/womens">Women's</Link></li>
+                      <li><Link href="/all-products/kids">Kid's</Link></li>
+                      <li><Link href="/all-products/accessories">Accessories</Link></li>
                     </ul>
                   </div>
                 </li>

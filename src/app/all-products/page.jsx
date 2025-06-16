@@ -179,7 +179,7 @@ const page = () => {
                                 <div id={ProductCss.categoryName}>
                                     <div className="d-flex justify-content-between align-items-center">
                                         <div>
-                                            <h4 className='mb-0'>Others</h4>
+                                            <h4 className='mb-0'>Accessories</h4>
                                         </div>
                                         <div>
                                             <p className='mb-0'>Items: 23</p>
@@ -189,6 +189,17 @@ const page = () => {
                             </Link>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div className="text-center my-5">
+              <h1>Our All Products</h1>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, repellendus enim, quo laboriosam laudantium, iure harum fuga reiciendis ullam similique velit vitae cupiditate. Fugit alias quod repellendus est non molestiae, amet temporibus commodi praesentium officiis provident! Omnis mollitia dolorum in.</p>
+            </div>
+
+            <div className="my-5">
+                <div id={ProductCss.all_products}>
+                    
                 </div>
             </div>
         </Sidegap>
