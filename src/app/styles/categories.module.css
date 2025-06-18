@@ -1,3 +1,31 @@
 .headline {
     text-transform: capitalize;
 }
+#products_of_category_ways h5 {
+    color: var(--black-color);
+}
+#products_of_category_ways p {
+    color: var(--black-color);
+}
+.regular_price {
+    text-decoration: line-through;
+}
+.salling_price {
+    font-weight: 700;
+    color: var(--first-color);
+}
+#products_of_category_ways #select_btn {
+    background-color: var(--first-color);
+    width: 100%;
+    color: var(--white-color);
+}
+#product_filtering {
+    position: sticky;
+    top: 0;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    #product_card {
+        width: 50%;
+    }
+}
