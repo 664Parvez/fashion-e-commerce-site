@@ -70,3 +70,9 @@ ul {
   background-color: var(--offwhite-color) !important;
   color: var(--first-color) !important;
 }
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  .row {
+    --bs-gutter-x: .8rem !important;
+  }
+}

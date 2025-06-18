@@ -88,11 +88,11 @@ export default function Home() {
                 spaceBetween: 10,
               },
               1024: {
-                slidesPerView: 4,
+                slidesPerView: 5,
                 spaceBetween: 10,
               },
               1100: {
-                slidesPerView: 5,
+                slidesPerView: 6,
                 spaceBetween: 20,
               }
             }}
@@ -217,6 +217,20 @@ export default function Home() {
               </div>
             </SwiperSlide> 
           </Swiper>
+        </div>
+
+        <div className={homeCss.three_banner_section}>
+            <div className="row">
+              <div className="col-lg-4 col-md-4">
+                <Image src={Blog} alt="" layout="responsive" width={0} height={0} className="rounded"></Image>
+              </div>
+              <div className="col-lg-4 col-md-4">
+                <Image src={Blog} alt="" layout="responsive" width={0} height={0} className="rounded"></Image>
+              </div>
+              <div className="col-lg-4 col-md-4">
+                <Image src={Blog} alt="" layout="responsive" width={0} height={0} className="rounded"></Image>
+              </div>
+            </div>
         </div>
 
         <div id={homeCss.product_section_one}>
