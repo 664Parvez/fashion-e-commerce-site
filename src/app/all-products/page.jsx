@@ -212,13 +212,13 @@ const page = () => {
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value="" id="checkDefault" />
                                             <label className="form-check-label" htmlFor="checkDefault">
-                                                Default checkbox
+                                                In stock (45)
                                             </label>
                                             </div>
                                             <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value="" id="checkChecked" />
                                             <label className="form-check-label" htmlFor="checkChecked">
-                                                Checked checkbox
+                                                Out of stock (6)
                                             </label>
                                         </div>
                                     </div>
