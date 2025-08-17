@@ -13,6 +13,8 @@ const category = ({params}) => {
 
   const {category} = params
 
+  const proId = {"slug" : "t-shirt", "category": "mens"}
+
   return (
     <>
       <Sidegap>
@@ -64,7 +66,7 @@ const category = ({params}) => {
                         <div className="col-lg-9">
                             <div className="row">
                                 <div className="col-lg-3 col-md-4 mt-4" id={CategoriesCss.product_card}>
-                                    <Link href="">
+                                    <Link href={`/all-products/${proId.category}/${proId.slug}`}>
                                         <div className="card">
                                             <Image src={Demo} width={0} height={0} layout='responsive' alt=''></Image>
                                             <div className="card-body">

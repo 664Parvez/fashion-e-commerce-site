@@ -44,7 +44,7 @@ p, li, a, label, input, span, small {
 button {
   font-family: "Kumbh Sans", sans-serif !important;
 }
-input::placeholder {
+input::placeholder, textarea::placeholder {
   font-size: 16px;
 }
 .btn-bg-white {
@@ -57,6 +57,7 @@ input::placeholder {
 }
 a {
   text-decoration: none !important;
+  color: var(--first-color);
 }
 ul {
   list-style: none;
@@ -69,6 +70,15 @@ ul {
 .accordion-button:not(.collapsed) {
   background-color: var(--offwhite-color) !important;
   color: var(--first-color) !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: #000000 !important;
+}
+.form-select:focus {
+  box-shadow: none !important;
+  border-color: #000000 !important;
 }
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {

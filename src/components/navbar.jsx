@@ -17,6 +17,9 @@ import { FiArrowUpRight } from "react-icons/fi";
 import NavbarLogo from "../../public/image/Navbar-Logo.png"
 import Image1 from "../../public/image/product1.jpg"
 
+// Redux
+import { useSelector } from 'react-redux'
+
 
 const Navbar = () => {
 
@@ -24,6 +27,9 @@ const Navbar = () => {
   const [mobileNavShow, setMobileNavShow] = useState(false)
   const [mobileDropdownMenu, setMobileDropdownMenu] = useState(false)
   const [searchRightBar, setSearchRightBar] = useState(false)
+
+  const stateData = useSelector((data) => data.product.data)
+  const wishData = useSelector((item) => item.wishlist.data) 
 
   return (
     <>
@@ -44,7 +50,7 @@ const Navbar = () => {
                                 </div>
                                 <div id={NavbarCss.navbar_logo}>
                                   <Link href="/">
-                                    <Image src={NavbarLogo} width={0} height={0} layout='responsive' alt=''></Image>
+                                    <Image src={NavbarLogo} width={0} height={0} layout="responsive" alt=''></Image>
                                   </Link>
                                 </div>
                             </div>
@@ -58,8 +64,8 @@ const Navbar = () => {
                             <div className={NavbarCss.navbar_icon}>
                                 <ul>
                                     <li className={NavbarCss.search_icon} onClick={() => setSearchRightBar(!searchRightBar)}><FaSearch /></li>
-                                    <li><Link href="/cart"><FaShoppingCart /><sup>0</sup></Link></li>
-                                    <li><Link href="/wishlist"><FaHeart /><sup>0</sup></Link></li>
+                                    <li><Link href="/cart"><FaShoppingCart /><sup>{stateData.length}</sup></Link></li>
+                                    <li><Link href="/wishlist"><FaHeart /><sup>{wishData.length}</sup></Link></li>
                                     <li><Link href="/login"><FaUser /></Link></li>
                                 </ul>
                             </div>

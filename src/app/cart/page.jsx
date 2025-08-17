@@ -1,9 +1,13 @@
 "use client"
 
-import React, {useState} from 'react'
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import CartCss from "../styles/cart.module.css"
+
+// Redux
+import { useDispatch, useSelector } from 'react-redux'
+import { emptyCart, increaseQty, decreaseQty, removeProductFromCart } from '@/redux/features/products/productSlice'
 
 // Component
 import Sidegap from '../../components/sidegap'
@@ -18,119 +22,136 @@ import Product1 from "../../../public/image/product1.jpg"
 
 const Cart = () => {
 
-  const [counter, setCounter] = useState(1)
+  const dispatch = useDispatch()
+  var deliveryCost = 13
+  const dataState = useSelector((data) => data.product.data)
+
+  if (dataState.length < 1) {
+    deliveryCost = 0
+  }
+
+  const totalPrice = dataState.reduce((acc, item) => {
+    return acc + item.price * item.quantity
+  }, 0)
 
 
   return (
     <>
-        <Sidegap>
-            <div className="text-center my-5">
-                <h1>Your Shopping Cart</h1>
-                <p><Link href="/">Home</Link> | Cart</p>
-            </div>
+      <Sidegap>
+        <div className="text-center my-5">
+          <h1>Your Shopping Cart</h1>
+          <p><Link href="/">Home</Link> | Cart</p>
+        </div>
 
-            <div className="container-fluid" id={CartCss.checkoutPage}>
-              <form action="">
-                <div className="row">
-
-                  <div className="col-lg-8 col-md-12">
-                    <div className={CartCss.checkoutLeft}>
-                      <div className="table-responsive">
-                        <table className="table align-middle">
-                          <thead>
-                            <tr>
-                              <th>Product</th>
-                              <th>Price</th>
-                              <th>Quantity</th>
-                              <th>Total</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                <div className="d-flex justify-content-start align-items-center gap-3">
+        <div className="container-fluid" id={CartCss.checkoutPage}>
+          <form action="">
+            <div className="row">
+              <div className="col-lg-8 col-md-12">
+                <div className={CartCss.checkoutLeft}>
+                  <div>
+                    {
+                      dataState.map((item) => {
+                        return (
+                          <>      
+                            <div className='d-flex justify-content-between align-items-center' key={item.id}>
+                              <div>
+                                <div className="d-flex justify-content-start align-items-center gap-3" id={CartCss.mobileBlock}>
                                   <div>
                                     <Link href="">
                                       <Image src={Product1} layout='responsive' className='rounded' height={0} width={0} alt=''></Image>
                                     </Link>
                                   </div>
                                   <div>
-                                    <h5 className='mb-0'>Faux-leather trousers</h5>
+                                    <h4 className='mb-0'>{item.title}</h4>
                                     <p>Color: Black</p>
+                                    <div className="mt-4">
+                                      <h5>${item.price}</h5>
+                                    </div>
                                   </div>
                                 </div>
-                              </td>
-                              <td><span>$125</span></td>
-                              <td>
-                                <div className='d-flex justify-content-start align-items-center gap-3'>
+                              </div>
+
+                              <div className='d-flex justify-content-between align-items-center gap-4' id={CartCss.cartIncDecPart}>
+                                <div className="d-flex justify-content-between align-items-center gap-3">
                                   <div>
-                                    <span className={CartCss.incDecBtn} onClick={() => setCounter(counter + 1)}>+</span>
+                                    <span className={CartCss.incDecBtn} onClick={() => dispatch(increaseQty(item))}>+</span>
                                   </div>
                                   <div>
-                                    <input type="text" className="form-control form-control-lg text-center" defaultValue={counter} />
+                                    <input type="text" className="form-control form-control-lg text-center" value={item.quantity} readOnly />
                                   </div>
                                   <div>
-                                    <span className={CartCss.incDecBtn} onClick={() => counter <= 1 ? setCounter(1) : setCounter(counter - 1)}>-</span>
+                                    <span className={CartCss.incDecBtn} onClick={() => dispatch(decreaseQty(item))}>-</span>
                                   </div>
                                 </div>
-                              </td>
-                              <td><span><b>$125</b></span></td>
-                              <td className='text-end'><button className='btn btn-lg'><IoTrashBin /></button></td>
-                            </tr>
-                          </tbody>
-                        </table>
+
+                                <div className="py-3 text-end">
+                                  <button className='btn btn-lg' onClick={() => dispatch(removeProductFromCart(item))}><IoTrashBin /></button>
+                                </div>
+                              </div>
+
+                            </div>
+
+                            <hr />
+                          </>
+                        )
+                      })
+                    }
+                  </div>
+                </div>
+
+
+                <div className="text-end my-5">
+                  <button className='btn btn-lg btn-dark' onClick={() => dispatch(emptyCart())}>Cart Clear</button>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-12">
+                <div className={CartCss.checkoutRight}>
+                  <h2>Order Summary</h2>
+
+                  <div className="mt-4">
+                    <div className='d-flex justify-content-between align-items-center mt-4'>
+                      <div>
+                        <p>Subtotal</p>
+                      </div>
+                      <div>
+                        <p><b>${totalPrice}</b></p>
+                      </div>
+                    </div>
+
+                    <div className='d-flex justify-content-between align-items-center mt-4'>
+                      <div>
+                        <p>Delivery Fee</p>
+                      </div>
+                      <div>
+                        <p>${deliveryCost}</p>
+                      </div>
+                    </div>
+
+                    <hr />
+                    <div className='d-flex justify-content-between align-items-center'>
+                      <div>
+                        <h5><b>Total </b></h5>
+                      </div>
+                      <div>
+                        <h4><b>${totalPrice + deliveryCost}</b></h4>
                       </div>
                     </div>
                   </div>
 
-                  <div className="col-lg-4 col-md-12">
-                    <div className={CartCss.checkoutRight}>
-                      <h2>Order Summary</h2>
+                  <div className="mt-4">
+                    <Link href="/checkout" className='btn btn-lg' id={CartCss.checkoutBtn}>Checkout <FaArrowRightLong /></Link>
 
-                      <div className="mt-4">
-                        <div className='d-flex justify-content-between align-items-center mt-4'>
-                          <div>
-                            <p>Subtotal</p>
-                          </div>
-                          <div>
-                            <p>৳175</p>
-                          </div>
-                        </div>
-
-                        <div className='d-flex justify-content-between align-items-center mt-4'>
-                          <div>
-                            <p>Delivery Fee</p>
-                          </div>
-                          <div>
-                            <p>৳0</p>
-                          </div>
-                        </div>
-
-                        <hr />
-                        <div className='d-flex justify-content-between align-items-center'>
-                          <div>
-                            <h5><b>Total </b></h5>
-                          </div>
-                          <div>
-                            <h4><b>৳175</b></h4>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="mt-4">
-                        <button className='btn btn-lg' id={CartCss.checkoutBtn}>Checkout <FaArrowRightLong /></button>
-
-                        <div className="text-center mt-3">
-                          <h5>Or continue <Link href="/products" className={CartCss.cartShopLink}>Shopping</Link></h5>
-                        </div>
-                      </div>
+                    <div className="text-center mt-3">
+                      <h5>Or continue <Link href="/products" className={CartCss.cartShopLink}>Shopping</Link></h5>
                     </div>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
-        </Sidegap>
+          </form>
+        </div>
+      </Sidegap>
     </>
   )
 }

@@ -28,6 +28,9 @@ import { Autoplay, Scrollbar } from 'swiper/modules';
 
 
 const page = () => {
+
+    const proId = {"slug" : "t-shirt", "category": "mens"}
+
   return (
     <>
         <Sidegap>
@@ -241,7 +244,7 @@ const page = () => {
                         <div className="col-lg-9">
                             <div className="row">
                                 <div className="col-lg-3 col-md-4 mt-4" id={ProductCss.product_card}>
-                                    <Link href="">
+                                    <Link href={`all-products/${proId.category}/${proId.slug}`}>
                                         <div className="card">
                                             <Image src={Demo} width={0} height={0} layout='responsive' alt=''></Image>
                                             <div className="card-body">

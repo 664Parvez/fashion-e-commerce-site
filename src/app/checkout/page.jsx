@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -14,7 +16,30 @@ import product2 from "../../../public/image/product2.jpg"
 import { FaTruckFast, FaRocketchat, FaGifts } from "react-icons/fa6";
 import { MdOutlineSupportAgent } from "react-icons/md";
 
+// Redux
+import { useSelector } from 'react-redux'
+
+
 const Checkout = () => {
+
+  const dataState = useSelector((item) => item.product.data)
+
+  const totalPrice = dataState.reduce((acc, item) => {
+    return acc + item.price * item.quantity
+  }, 0)
+
+  const totalQty = dataState.reduce((acc, item) => {
+    return acc + item.quantity
+  }, 0)
+
+
+
+  var deliveryCost = 13
+  if (dataState.length < 1) {
+    deliveryCost = 0
+  }
+
+
   return (
     <>
         <Sidegap>
@@ -87,59 +112,55 @@ const Checkout = () => {
                 <div className="col-lg-5 col-md-6">
                   <div id={checkoutCss.rightContainer}>
                     <h2>Shopping Cart</h2>
-                    <p className='mb-5'>2 Items in your bag</p>
+                    <p className='mb-5'><b>{totalQty}</b> Items in your bag</p>
 
-                    <div className={checkoutCss.product_item}>
-                      <div className='d-flex align-items-center gap-4'>
-                        <div>
-                          <Link href="">
-                            <Image src={product1} id={checkoutCss.itemImg} className='rounded' layout='responsive' width="0" height="0" loading='lazy' alt=''></Image>
-                          </Link>
-                        </div>
-                        <div className='d-flex align-items-center justify-content-between flex-grow-1'>
-                            <div>
-                              <Link href=""><h4>Faux-leather trousers</h4></Link>
-                              <p>Size: XL</p>
-                              <p>Qty: 1</p>
+                    {
+                      dataState.map((item) => {
+                        console.log(item)
+                        return (
+                          <>      
+                            <div className={checkoutCss.product_item}>
+                              <div className='d-flex align-items-center gap-4'>
+                                <div>
+                                  <Link href="">
+                                    <Image src={product1} id={checkoutCss.itemImg} className='rounded' layout='responsive' width="0" height="0" loading='lazy' alt=''></Image>
+                                  </Link>
+                                </div>
+                                <div className='d-flex align-items-center justify-content-between flex-grow-1'>
+                                    <div>
+                                      <Link href=""><h4>{item.title}</h4></Link>
+                                      <p>Size: XL</p>
+                                      <p>Qty: {item.quantity}</p>
+                                    </div>
+                                    <div>
+                                      <h4><b>${item.price * item.quantity}</b></h4>
+                                    </div>
+                                </div>
+                              </div>
                             </div>
-                            <div>
-                              <h4><b>৳175</b></h4>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
 
-                    <hr />
-
-                    <div className={checkoutCss.product_item}>
-                      <div className='d-flex align-items-center gap-4'>
-                        <div>
-                          <Link href="">
-                            <Image src={product2} id={checkoutCss.itemImg} className='rounded' layout='responsive' width="0" height="0" loading='lazy' alt=''></Image>
-                          </Link>
-                        </div>
-                        <div className='d-flex align-items-center justify-content-between flex-grow-1'>
-                            <div>
-                              <Link href=""><h4>Faux-leather trousers</h4></Link>
-                              <p>Size: XL</p>
-                              <p>Qty: 1</p>
-                            </div>
-                            <div>
-                              <h4><b>৳175</b></h4>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
+                            <hr className='pt-3' />
+                          </>
+                        )
+                      })
+                    }
 
 
                     <div id={checkoutCss.checkout_right_pricing} className='mt-5'>
-                    <hr />
+                      <div className='d-flex align-items-center justify-content-between mt-4'>
+                        <div>
+                          <p><b>Total </b></p>
+                        </div>
+                        <div>
+                          <p>${totalPrice}</p>
+                        </div>
+                      </div>
                       <div className='d-flex align-items-center justify-content-between mt-4'>
                         <div>
                           <p><b>Shipping </b></p>
                         </div>
                         <div>
-                          <p>Free</p>
+                          <p>${deliveryCost}</p>
                         </div>
                       </div>
                       <div className='d-flex align-items-center justify-content-between mt-4'>
@@ -154,10 +175,10 @@ const Checkout = () => {
 
                       <div className='d-flex align-items-center justify-content-between mt-4'>
                           <div>
-                            <h3><b>Total </b></h3>
+                            <h3><b>Grand Total </b></h3>
                           </div>
                           <div>
-                            <h3><b>-৳150</b></h3>
+                            <h3><b>${(totalPrice + deliveryCost) - 15}</b></h3>
                           </div>
                         </div>
                       </div>
